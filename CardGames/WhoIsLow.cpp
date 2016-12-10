@@ -19,7 +19,7 @@ vector<shared_ptr<AnalyzedDeck>> WhoIsLow::Play(const vector<Player>& players) c
 	{
 		vector<int> numbers(GetMaxCardCount());
 		auto deck = players[i].GetDeck();
-		transform(deck.begin(), deck.end(), numbers.begin(), [](Card card) { return card.GetNumber(); });
+		transform(deck.begin(), deck.end(), numbers.begin(), [](Card card) { return card.GetNumber() > 13 ? card.GetNumber() - 13 : card.GetNumber(); });
 		result.emplace_back(new AnalyzedDeckForWhoIsLow(accumulate(numbers.begin(), numbers.end(), 0)));
 	}
 	return result;

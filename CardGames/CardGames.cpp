@@ -11,6 +11,7 @@ using namespace std;
 
 void TestCase(void)
 {
+	cout << "-= Test Rule =-" << endl;
 	vector<Card> royal_flush_deck{ Card('S', 14), Card('S', 13), Card('S', 12), Card('S', 11), Card('S', 10), Card('H', 7), Card('D', 10) };
 	vector<Card> straight_flush{ Card('C', 4), Card('C', 5), Card('C', 6), Card('C', 7), Card('C', 8), Card('C', 9), Card('C', 10) };
 	vector<Card> four_of_a_card{ Card('C', 7), Card('S', 7), Card('D', 7), Card('H', 7), Card('C', 10), Card('S', 11), Card('S', 14) };
@@ -31,7 +32,7 @@ void TestCase(void)
 	cout << SevenPokerRule(three_of_a_card).AnalyzeTheDeck() << endl;
 	cout << SevenPokerRule(two_pairs).AnalyzeTheDeck() << endl;
 	cout << SevenPokerRule(one_pairs).AnalyzeTheDeck() << endl;
-	cout << SevenPokerRule(high_card).AnalyzeTheDeck() << endl;
+	cout << SevenPokerRule(high_card).AnalyzeTheDeck() << endl << endl;
 }
 
 int main()
